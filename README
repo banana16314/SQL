@@ -1,0 +1,34 @@
+sqlite3数据库基本操作：
+
+运行环境：win10+python3.6+pycharm
+
+sql.txt包含涉及到的要求及SQL语句
+三张表：
+CREATE TABLE student (
+  snum   CHAR(8) PRIMARY KEY NOT NULL,
+  sname  CHAR(10)            NOT NULL,
+  ssex   CHAR(2),
+  sage   INT,
+  dname  CHAR(10),
+  sclass CHAR(6)
+);
+
+CREATE TABLE course (
+  cnum     CHAR(3) PRIMARY KEY NOT NULL,
+  cname    CHAR(12)            NOT NULL,
+  chours   INT,
+  credit   FLOAT(1),
+  Csemster INT
+);
+
+CREATE TABLE SC
+(
+  snum  CHAR(8) NOT NULL,
+  cnum  CHAR(3) NOT NULL,
+  score FLOAT(1),
+  PRIMARY KEY (snum, cnum),
+  FOREIGN KEY (snum) REFERENCES student (snum),
+  FOREIGN KEY (cnum) REFERENCES course (cnum)
+);
+
+SCT.db是数据文件
