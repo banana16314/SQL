@@ -1,0 +1,8 @@
+student_query -q 1 -p 001
+student_query -q 2 -p 98030102
+student_query -q 3 -p 数据库
+student_query -q 4 -p 张五
+student_query -q 5 -p 88
+student_query -q 6 -p 80
+student_query -q 7 -p 张三
+student_query -q 8 -p 数据结构
